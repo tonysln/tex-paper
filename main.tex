@@ -57,15 +57,19 @@
 % TOC/LOF/LOT setup for a *short* table
 \renewcommand{\cftsecdotsep}{\cftdotsep}
 \renewcommand\cftaftertoctitle{\vspace{-0.3cm}\par\noindent\hrulefill\par\vspace{-0.4cm}}
-\setlength{\cftsecindent}{0.8cm}
+\setlength{\cftsecindent}{0.95cm}
 \setlength{\cftsubsecindent}{2cm}
 \setlength{\cftsubsubsecindent}{3cm}
 \setlength{\cftbeforesecskip}{0.25cm}
 
-\renewcommand{\baselinestretch}{1.05}
+\renewcommand{\baselinestretch}{1.055}
 
 % Fonts used
-\usepackage{lmodern}
+
+% Enable for sans-serif fonts, leave just this for the beautiful default one
+\renewcommand*\familydefault{\sfdefault}
+
+%\usepackage{lmodern}
 
 
 
@@ -74,9 +78,14 @@
 %      DOCUMENT
 % <<<<<<<<<<<<<<<<<
 
-\title{\scshape Document Title}
-\author{\bfseries Anton Slavin}
-\date{\today}
+% Title in small caps or bold
+% Which one looks better depends on whether a subtitle is used or not
+
+%\title{\textsc{Document Title}}
+\title{\textbf{Document Title}}
+
+\author{\textbf{Anton Slavin}}
+\date{\vspace*{-0.3cm} \today}
 
 
 \begin{document}
